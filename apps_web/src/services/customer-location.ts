@@ -1,0 +1,11 @@
+import type { CustomerLocationData } from '../models'
+import { CrudService } from './base/crudService'
+import { appvars } from '../config'
+
+const CustomerLocationService = new CrudService<CustomerLocationData>(
+  'customer-location',
+  appvars.ENDPOINT.CUSTOMER_LOCATION,
+  {},
+)
+
+export default CustomerLocationService

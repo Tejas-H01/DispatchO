@@ -1,0 +1,19 @@
+import type { ReactElement } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { OrderQueryProvider } from '../../../contexts/OrderQueryContext'
+import { List } from '../List'
+import { Editor } from '../Editor'
+import { Details } from '../Details'
+
+export const OrderRouter = (): ReactElement => {
+  return (
+    <OrderQueryProvider>
+      <Routes>
+        <Route path='new' element={<Editor />} />
+        <Route path=':orderId/edit' element={<Editor />} />
+        <Route path=':orderId' element={<Details />} />
+        <Route index element={<List />} />
+      </Routes>
+    </OrderQueryProvider>
+  )
+}
