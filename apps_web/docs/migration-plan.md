@@ -35,7 +35,7 @@
 | 지도 | **react-map-gl 8.x**, mapbox-gl 3.x, @mapbox/polyline 1.2.x | v8는 `Map` 컴포넌트 기반 신 API |
 | 상태/유틸 | immer 11.x, use-immer 0.11.x, uuid 11.x, dayjs 1.11.x, axios 1.x | |
 | 제거 | aws-northstar, react-intl, chart.js, react-chartjs-2, react-dropzone*, react-image-gallery, kaktana-*, worker-loader, react-scripts, web-vitals, reportWebVitals.ts | src에서 미사용 또는 불필요 |
-| Lint/Format | ESLint 9.x (Flat config) + Prettier 3.x | 기존 workspace의 `@aws-samples/eslint` 설정은 제거하고 독립 구성 |
+| Lint/Format | ESLint 9.x (Flat config) + Prettier 3.x | 기존 workspace의 `@DispatchO/eslint` 설정은 제거하고 독립 구성 |
 
 ## 4. 대안 검토 요약
 

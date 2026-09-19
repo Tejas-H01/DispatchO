@@ -160,4 +160,4 @@ apps_infra/
 
 ## License
 
-MIT-0
+MIT

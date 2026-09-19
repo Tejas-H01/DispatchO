@@ -7,11 +7,11 @@ import * as path from 'node:path'
  *
  * Verifies that no dependency in `dependencies` or `devDependencies`
  * matches the forbidden pattern:
- *   /^(@aws-samples\/|@infra\/|@config\/|lerna$|yarn$|config$|find-up$|cdk-constants$|http-method-enum$)/
+ *   /^(@DispatchO\/|@infra\/|@config\/|lerna$|yarn$|config$|find-up$|cdk-constants$|http-method-enum$)/
  */
 describe('Property 9: No forbidden dependencies', () => {
   const FORBIDDEN_PATTERN =
-    /^(@aws-samples\/|@infra\/|@config\/|lerna$|yarn$|config$|find-up$|cdk-constants$|http-method-enum$)/
+    /^(@DispatchO\/|@infra\/|@config\/|lerna$|yarn$|config$|find-up$|cdk-constants$|http-method-enum$)/
 
   const pkgPath = path.resolve(__dirname, '..', '..', 'package.json')
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'))
@@ -42,7 +42,7 @@ describe('Property 9: No forbidden dependencies', () => {
 
   // Verify each forbidden pattern individually for clarity
   const forbiddenExamples = [
-    '@aws-samples/some-package',
+    '@DispatchO/some-package',
     '@infra/common',
     '@infra/networking',
     '@config/eslint',

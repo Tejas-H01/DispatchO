@@ -12,19 +12,19 @@
 
 ---
 
-## D1. `@aws-samples/*` 내부 패키지 의존성 처리 방식
+## D1. `@DispatchO/*` 내부 패키지 의존성 처리 방식
 
 ### 배경
 기존 `apps/infra` 는 monorepo 내부 7개 패키지를 import 합니다.
 
-- `@aws-samples/common` (packages/@infra/common)
-- `@aws-samples/cognito-auth`
-- `@aws-samples/data-storage`
-- `@aws-samples/web-hosting`
-- `@aws-samples/networking`
-- `@aws-samples/api-web`
-- `@aws-samples/api-order`
-- `@aws-samples/ecs-task`
+- `@DispatchO/common` (packages/@infra/common)
+- `@DispatchO/cognito-auth`
+- `@DispatchO/data-storage`
+- `@DispatchO/web-hosting`
+- `@DispatchO/networking`
+- `@DispatchO/api-web`
+- `@DispatchO/api-order`
+- `@DispatchO/ecs-task`
 
 이 패키지들은 npm 레지스트리에 게시되어 있지 않고, 내부적으로 Lambda 코드와 CDK constructs 를 동시에 포함하고 있어 **infra 를 single-package 로 만들려면 이 의존성을 어떻게 흡수할지** 결정해야 합니다.
 
@@ -36,7 +36,7 @@
   - 장점: 단일 패키지로 완전히 독립, 빌드/배포가 단순해짐
   - 단점: 초기 이관 작업량 많음
 - **옵션 B: pnpm 로컬 link (file: 프로토콜)**
-  - `apps_infra/packages/` 아래에 원본 패키지들을 복사해 두고 `package.json` 에 `"@aws-samples/common": "workspace:*"` 또는 `"file:./packages/common"` 으로 참조
+  - `apps_infra/packages/` 아래에 원본 패키지들을 복사해 두고 `package.json` 에 `"@DispatchO/common": "workspace:*"` 또는 `"file:./packages/common"` 으로 참조
   - 장점: 내부 구조 최소 변경
   - 단점: single-package 요구사항과 상충, pnpm workspace 가 다시 필요해짐
 - **옵션 C: 별도 프라이빗 레지스트리 게시 후 의존**
@@ -296,7 +296,7 @@ CDK `2.59 → 2.252` 사이에 다음 breaking change 가 누적됩니다 (이�
 - 질문: (x) 추천 적용  ( ) 버전 변경 ______
 
 ### 10.3 License/Copyright 헤더 유지
-- 기존 `SPDX-License-Identifier: MIT-0` 및 Copyright 주석을 모든 파일에 유지
+- 기존 `SPDX-License-Identifier: MIT` 및 Copyright 주석을 모든 파일에 유지
 - 질문: (x) 유지  ( ) 제거  ( ) 내용 변경 ______
 
 ### 10.4 lint 설정 (ESLint)

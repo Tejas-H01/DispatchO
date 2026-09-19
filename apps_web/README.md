@@ -143,4 +143,4 @@ request `options.headers`.
 
 ## License
 
-MIT-0 — see the root [`LICENSE`](../LICENSE). Version history is tracked in the root [`CHANGELOG.md`](../CHANGELOG.md).
+MIT — see the root [`LICENSE`](../LICENSE). Version history is tracked in the root [`CHANGELOG.md`](../CHANGELOG.md).

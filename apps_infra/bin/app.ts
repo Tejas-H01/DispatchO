@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// SPDX-License-Identifier: MIT-0
+// SPDX-License-Identifier: MIT
 
 import 'source-map-support/register'
 import { App } from 'aws-cdk-lib'
